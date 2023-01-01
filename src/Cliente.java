@@ -3,7 +3,7 @@ class Arma {
     private String nomeArma;
 
     /*
-     * Métodos acessores modificadores
+     * Métodos acessores modificadores.
      */
     public void setIdArma(int idArma){
         this.idArma = idArma;
