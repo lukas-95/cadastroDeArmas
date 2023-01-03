@@ -19,11 +19,25 @@ public class Main {
     }
 
     private void cadastrarArma(){
+
+
         Scanner leitor = new Scanner(System.in);
         Arma Arma = new Arma();
 
-        System.out.print("ID da arma: ");
-        Arma.setIdArma(leitor.nextInt());
+        boolean idArmaValidation = true;
+        while (idArmaValidation){
+            try{
+                System.out.print("ID da arma: ");
+                leitor = new Scanner(System.in);
+                Arma.setIdArma(leitor.nextInt());
+                idArmaValidation = false;
+            }catch (Exception e){
+                System.out.println("Digite um valor valido");
+            }
+
+        }
+
+
 
         System.out.print("Caracteristicas da arma: ");
         leitor.nextLine();// limpa o scanner
